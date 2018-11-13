@@ -4,8 +4,6 @@ import './utils/array.js';
 
 import { invoiceService as service } from './invoice/service.js';
 
-
-
 document
   .querySelector('#fetchButton')
   .onclick = () =>
