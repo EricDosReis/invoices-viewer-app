@@ -1,12 +1,15 @@
-import { handleStatus }  from './utils/fetch-helpers.js';
+import { handleStatus }  from './utils/fetch.js';
+import { log } from './utils/log.js';
+import './utils/array.js';
+
+import { invoiceService as service } from './invoice/service.js';
+
+
 
 document
   .querySelector('#fetchButton')
   .onclick = () =>
-    fetch('http://localhost:3000/invoices')
-      .then(handleStatus)
-      .then(invoices => invoices.reduce((accumulator, invoice) => accumulator.concat(invoice.items), []))
-      .then(items => items.filter(item => item.id == '2143'))
-      .then(items => items.reduce((total, item) => total + item.value, 0))
-      .then(console.log)
-      .catch(console.log);
+    service
+      .sumItems('2143')
+      .then(log)
+      .catch(log);
