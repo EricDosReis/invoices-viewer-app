@@ -1,10 +1,15 @@
 import { handleStatus } from '../utils/fetch.js';
+import { partialize, compose, pipe } from '../utils/operators.js';
 
 const API = 'http://localhost:3000/invoices';
 
-const sumItems = (id) => invoices => invoices
-  .$flatMap(invoice => invoice.items)
-  .filter(item => item.id == id)
+const getItemsFromInvoices = invoices => invoices
+  .$flatMap(invoice => invoice.items);
+
+const filterItemsById = (id, items) => items
+  .filter(item => item.id === id);
+
+const sumItemsValue = items => items
   .reduce((total, item) => total + item.value, 0);
 
 export const invoiceService = {
@@ -19,7 +24,12 @@ export const invoiceService = {
   },
 
   sumItems(id) {
-    return this.listAll()
-      .then(sumItems(id));
+    const sumItems = pipe(
+      getItemsFromInvoices,
+      partialize(filterItemsById, id),
+      sumItemsValue
+    );
+
+    return this.listAll().then(sumItems);
   }
 }
