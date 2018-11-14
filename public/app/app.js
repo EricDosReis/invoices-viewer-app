@@ -1,4 +1,5 @@
 import { log } from './utils/log.js';
+import { timeoutPromise } from './utils/promise-helpers.js';
 import { takeUntil, debounceTime, partialize, pipe } from './utils/operators.js';
 import './utils/array.js';
 
@@ -10,8 +11,7 @@ const operations = pipe(
 );
 
 const action = operations(() =>
-  service
-    .sumItems('2143')
+  timeoutPromise(200, service.sumItems('2143'))
     .then(log)
     .catch(log)
 );

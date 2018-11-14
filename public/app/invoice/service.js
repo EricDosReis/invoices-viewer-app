@@ -1,4 +1,4 @@
-import { handleStatus } from '../utils/fetch.js';
+import { handleStatus } from '../utils/promise-helpers.js';
 import { partialize, compose, pipe } from '../utils/operators.js';
 
 const API = 'http://localhost:3000/invoices';
