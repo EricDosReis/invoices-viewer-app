@@ -1,4 +1,5 @@
 import { log } from './utils/log.js';
+import { EventEmitter } from './utils/event-emitter.js';
 import { timeoutPromise, retry } from './utils/promise-helpers.js';
 import { takeUntil, debounceTime, partialize, pipe } from './utils/operators.js';
 import './utils/array.js';
@@ -12,7 +13,7 @@ const operations = pipe(
 
 const action = operations(() =>
   retry(3, 100, () => timeoutPromise(3000, service.sumItems('2143')))
-    .then(log)
+    .then(total => EventEmitter.emit('itemsTotalValue', `Invoices total value $${total}`))
     .catch(log)
 );
 
