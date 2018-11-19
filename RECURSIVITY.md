@@ -52,3 +52,5 @@ const factorial = (acc, n) => {
 // Yesss! Works fine o/
 console.log(trampoline(factorial(1, 20000)));
 ```
+
+[9th chapter - Memoization](https://github.com/EricDosReis/invoices-viewer-app/blob/master/MEMOIZATION.md).
