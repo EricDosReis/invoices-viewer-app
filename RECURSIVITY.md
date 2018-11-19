@@ -30,7 +30,7 @@ const factorial = (acc, n) => {
 console.log(factorial(1, 20000));
 ```
 
-#### Pattern Trampoline will save us
+#### Trampoline pattern will save us
 
 Trampoline pattern is used for implementing algorithms recursively in Java without blowing the stack and to interleave the execution of functions without hard coding them together It is possible by representing a computation in one of 2 states : done | more.
 

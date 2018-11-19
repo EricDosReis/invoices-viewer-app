@@ -7,6 +7,6 @@
 
 ## 8th chapter
 
-[Secure recursion with Trampoline pattern](https://nodejs.org/en/).
+[Secure recursion with Trampoline pattern](https://github.com/EricDosReis/invoices-viewer-app/blob/master/RECURSIVITY.md).
 
 That's all folks!
