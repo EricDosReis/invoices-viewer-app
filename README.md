@@ -1,8 +1,8 @@
 # Running instructions
 
-**Prerequisites**: nodeJS installed, (download here)[https://nodejs.org/en/].
+**Prerequisites**: nodeJS installed, [download here](https://nodejs.org/en/).
 
--clone this repository.
--run 'node server' on terminal
+1. clone this repository.
+2. run 'node server' on terminal
 
 That's all folks!
