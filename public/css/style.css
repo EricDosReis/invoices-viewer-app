@@ -1,0 +1,41 @@
+body {
+  font-family: Roboto, Helvetica;
+}
+
+.btn {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #2BA6CB;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  color: #FEFEFE;
+  cursor: pointer;
+  display: inline-block;
+  font-family: inherit;
+  font-size: .9125rem;
+  letter-spacing: .125rem;
+  line-height: 1;
+  margin: 0 0 1rem 0;
+  padding: .5rem;
+  text-align: center;
+  transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
+  vertical-align: middle;
+}
+
+  .btn:hover, .btn:focus {
+    background-color: #258DAD;
+    color: #FEFEFE;
+  }
+
+.text-center {
+  text-align: center;
+}
+
+.text-thin {
+  font-weight: 300;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
