@@ -9,4 +9,8 @@
 
 [Secure recursion with Trampoline pattern](https://github.com/EricDosReis/invoices-viewer-app/blob/master/RECURSIVITY.md).
 
+## 9th chapter
+
+[Memoization](https://github.com/EricDosReis/invoices-viewer-app/blob/master/MEMOIZATION.md).
+
 That's all folks!
