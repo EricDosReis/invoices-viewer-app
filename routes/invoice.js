@@ -24,5 +24,13 @@ const invoices = [
 
 module.exports = app => {
   app.get('/invoices', (req, res) => res.json(invoices));
-  app.get('/invoices/:id', (req, res) => res.json(invoices[0]));
+
+  app.get('/invoices/:id', (req, res) => {
+    const id = req.params.id;
+    const invoice = invoices[id];
+
+    invoice
+      ? res.json(invoice)
+      : res.json({ message: `There is no invoice with id: ${id}` });
+  });
 }

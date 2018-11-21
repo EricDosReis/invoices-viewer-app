@@ -14,6 +14,11 @@ const sumItemsValue = itemsMaybe =>
   itemsMaybe.map(items => items.reduce((total, item) => total + item.value, 0));
 
 export const invoiceService = {
+  getOne(id) {
+    return fetch(`${API}/${id}`)
+      .then(handleStatus);
+  },
+
   listAll() {
     return fetch(API)
       .then(handleStatus)

@@ -1,4 +1,5 @@
 import { log } from './utils/log.js';
+import { memoizer } from './utils/memoizer.js';
 import { EventEmitter } from './utils/event-emitter.js';
 import { timeoutPromise, retry } from './utils/promise-helpers.js';
 import { takeUntil, debounceTime, partialize, pipe } from './utils/operators.js';
@@ -21,3 +22,15 @@ document
   .querySelector('#fetchButton')
   .onclick = action;
 
+const getInvoiceById = id =>
+  service.getOne(id);
+
+const memoizedGetInvoiceById = memoizer(getInvoiceById);
+
+memoizedGetInvoiceById(1)
+  .then(log)
+  .then(memoizedGetInvoiceById.clearCache())
+  .then(memoizedGetInvoiceById(1))
+  .then(memoizedGetInvoiceById(1))
+  .then(log)
+  .catch(log);
