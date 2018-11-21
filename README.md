@@ -13,4 +13,8 @@
 
 [Memoization](https://github.com/EricDosReis/invoices-viewer-app/blob/master/MEMOIZATION.md).
 
+## 9th chapter
+
+[Decorator](https://github.com/EricDosReis/invoices-viewer-app/blob/master/DECORATOR.md).
+
 That's all folks!

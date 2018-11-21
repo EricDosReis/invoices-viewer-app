@@ -1,6 +1,6 @@
 # Memoization
 
-Memoization is a programming technique which attempts to increase a function’s performance by caching its previously computed results.
+Memoization is an optimization technique used primarily to speed up computer programs by storing the results of expensive function calls and returning the cached result when the same inputs occur again.
 
 ## Implementation
 
@@ -52,3 +52,5 @@ console.log(factorial(5));
 console.log(factorial(3));
 console.log(factorial(4));
 ```
+
+[10th chapter - Decorator](https://github.com/EricDosReis/invoices-viewer-app/blob/master/DECORATOR.md).
