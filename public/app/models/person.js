@@ -1,3 +1,6 @@
+import { decorate } from '../utils/decorate.js';
+import { logExecutionTime, inspectMethod } from '../utils/decorators.js';
+
 export class Person {
   constructor(name, surname) {
     this._name = name;
@@ -12,3 +15,8 @@ export class Person {
     return `${this._name} ${this._surname}`;
   }
 }
+
+decorate(Person, {
+  speak: [inspectMethod({ excludeReturn: true }), logExecutionTime],
+  getFullName: [inspectMethod(), logExecutionTime]
+});
