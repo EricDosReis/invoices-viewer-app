@@ -12,7 +12,7 @@
 
 ## 9th chapter
 
-[Memoization](https://github.com/EricDosReis/invoices-viewer-app/blob/master/MEMOIZATION.md).
+[Fast functions with Memoization](https://github.com/EricDosReis/invoices-viewer-app/blob/master/MEMOIZATION.md).
 
 ## 10th chapter
 
